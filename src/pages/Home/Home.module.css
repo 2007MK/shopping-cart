@@ -1,0 +1,58 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-family: "Bruno Ace";
+  font-weight: normal;
+  color: white;
+  padding: 40px;
+  margin: auto;
+}
+
+.left {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.left button {
+  align-self: flex-start;
+  padding: 16px 30px;
+  color: var(--primary-accent);
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid var(--primary-accent);
+  background-color: transparent;
+}
+
+.left button:hover {
+  background-color: var(--primary-accent);
+  color: var(--background-color);
+}
+
+.heroTitle span {
+  color: var(--secondary-accent);
+}
+
+.heroSubtitle {
+  color: var(--off-white);
+  font-weight: 100;
+}
+
+.heroSubtitle span {
+  color: var(--tertiary-accent);
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 700px) {
+  .hero {
+    flex-direction: row;
+  }
+}
