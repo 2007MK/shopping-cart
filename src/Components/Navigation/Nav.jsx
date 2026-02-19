@@ -13,7 +13,12 @@ function Nav() {
         <div className={styles.logo}>
           <h1 className={styles.heading}>NEOPLAY</h1>
         </div>
-        <button className={styles.menuBtn} onClick={() => setNavOpen(!navOpen)}>
+        <button
+          aria-expanded={navOpen}
+          aria-label="Toggle Navigation"
+          className={styles.menuBtn}
+          onClick={() => setNavOpen(!navOpen)}
+        >
           <Icon className={styles.icon} path={mdiMenu} size={styles.icon} />
         </button>
       </div>

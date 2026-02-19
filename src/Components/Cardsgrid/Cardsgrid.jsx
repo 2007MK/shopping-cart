@@ -5,7 +5,12 @@ function Cardsgrid({ products }) {
   return (
     <div className={styles.cardsGrid}>
       {products.map((product) => (
-        <Card title={product.title} price={product.price} img={product.image} />
+        <Card
+          key={product.id}
+          title={product.title}
+          price={product.price}
+          img={product.image}
+        />
       ))}
     </div>
   );
