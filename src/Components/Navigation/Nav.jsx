@@ -2,6 +2,7 @@ import styles from "./Nav.module.css";
 import Icon from "@mdi/react";
 import { mdiMenu } from "@mdi/js";
 import { useState } from "react";
+import { Link } from "react-router";
 
 function Nav() {
   const [navOpen, setNavOpen] = useState(false);
@@ -18,9 +19,15 @@ function Nav() {
       </div>
       <nav className={`${styles.nav} ${navOpen ? styles.navVisible : ""}`}>
         <ul>
-          <li>Home</li>
-          <li>Shop</li>
-          <li>Cart</li>
+          <Link className={styles.navItems} to="/">
+            Home
+          </Link>
+          <Link className={styles.navItems} to="/shop">
+            Shop
+          </Link>
+          <Link className={styles.navItems} to="/cart">
+            Cart
+          </Link>
         </ul>
       </nav>
     </div>

@@ -43,11 +43,12 @@ ul {
   /* border: 3px solid green; */
 }
 
-li {
+.navItems {
   list-style: none;
   font-family: "Bruno Ace";
   font-size: 24px;
   color: white;
+  text-decoration: none;
 }
 
 svg {
