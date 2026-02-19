@@ -6,6 +6,11 @@
   --secondary-accent: #00c0fe;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 @font-face {
   font-family: "Bruno Ace";
   src: url(./assets/fonts/Bruno_Ace/BrunoAce-Regular.ttf);
