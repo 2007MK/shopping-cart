@@ -1,7 +1,8 @@
+import Nav from "./Components/Navigation/Nav.jsx";
 import styles from "./App.module.css";
 
 function App() {
-  return <h1 className={styles.heading}>Hello World!</h1>;
+  return <Nav></Nav>;
 }
 
 export default App;

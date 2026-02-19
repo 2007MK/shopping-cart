@@ -1,0 +1,79 @@
+.header {
+  display: flex;
+  /* border: 1px solid red; */
+  justify-content: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  font-family: "Kodchasan";
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--primary-accent);
+}
+
+.menuBtn {
+  color: var(--primary-accent);
+  background-color: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoAndMenu {
+  /* border: 5px solid blue; */
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  /* border: 3px solid green; */
+}
+
+li {
+  list-style: none;
+  font-family: "Bruno Ace";
+  font-size: 24px;
+  color: white;
+}
+
+svg {
+  width: 2rem;
+}
+
+.nav {
+  display: none;
+}
+
+.navVisible {
+  display: block;
+}
+
+@media (min-width: 700px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menuBtn {
+    display: none;
+    visibility: hidden;
+  }
+
+  .nav {
+    display: block;
+  }
+}
