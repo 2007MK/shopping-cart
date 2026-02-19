@@ -1,0 +1,24 @@
+:root {
+  --background-color: #121417;
+  --background-color-card: #1e1f22;
+  --primary-accent: #00f5b3;
+  --primary-hover: #00c896;
+  --secondary-accent: #00c0fe;
+}
+
+@font-face {
+  font-family: "Bruno Ace";
+  src: url(./assets/fonts/Bruno_Ace/BrunoAce-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Kodchasan";
+  font-weight: bold;
+  src: url(./assets/fonts/Kodchasan/Kodchasan-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Kodchasan";
+  font-weight: normal;
+  src: url(./assets/fonts/Kodchasan/Kodchasan-Regular.ttf);
+}
