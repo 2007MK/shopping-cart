@@ -20,7 +20,15 @@ function Home() {
           </Link>
         </div>
         <div className={styles.right}>
-          <Card name={"Sneakers"} price={699} img={sneak}></Card>
+          <div className={styles.card}>
+            <div className={styles.imageContainer}>
+              <img src={sneak} />
+            </div>
+            <div className={styles.info}>
+              <h3>Sneakers</h3>
+              <h3 className={styles.price}>$699</h3>
+            </div>
+          </div>
         </div>
       </div>
     </>

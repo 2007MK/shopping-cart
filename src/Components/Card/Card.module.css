@@ -1,18 +1,29 @@
 .card {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   background-color: var(--background-color-card);
-  box-shadow:
-    1rem 1rem 0 var(--primary-accent),
-    1rem 1rem 0 2px #000;
   padding: 1rem;
   border-radius: 15px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  height: 300px;
+}
+
+.card:hover {
+  transform: translate(-0.5rem, -0.5rem);
+  box-shadow:
+    0.5rem 0.5rem 0 var(--primary-accent),
+    0.5rem 0.5rem 0 2px #000;
 }
 
 .info {
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   padding: 5px;
+  gap: 1rem;
+  font-family: "Bruno Ace";
 }
 
 .info .price {
@@ -21,13 +32,17 @@
 
 .imageContainer {
   /* width: 400px; */
-  max-height: 250px;
+  height: 200px;
   border-bottom: 1px solid white;
   max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
-  width: 400px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 

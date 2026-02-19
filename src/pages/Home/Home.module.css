@@ -25,6 +25,7 @@
   border-radius: 10px;
   border: 2px solid var(--primary-accent);
   background-color: transparent;
+  transition: all 0.2s ease;
 }
 
 .left button:hover {
@@ -51,7 +52,46 @@
   align-items: center;
 }
 
+/*The card preview*/
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color-card);
+  box-shadow:
+    1rem 1rem 0 var(--primary-accent),
+    1rem 1rem 0 2px #000;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.info .price {
+  color: var(--primary-accent);
+}
+
+.imageContainer {
+  /* width: 400px; */
+  max-height: 250px;
+  border-bottom: 1px solid white;
+  max-width: 400px;
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
 @media (min-width: 700px) {
+  .imageContainer {
+    max-width: 40rem;
+    max-height: 30rem;
+  }
+
   .hero {
     flex-direction: row;
   }
