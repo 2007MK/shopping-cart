@@ -1,14 +1,23 @@
 import styles from "./Card.module.css";
 
-function Card({ img, title, price }) {
+function Card({ product, addToCart }) {
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
-        <img src={img} />
+        <img src={`${product.image}`} />
       </div>
       <div className={styles.info}>
-        <h4 className={styles.title}>{title}</h4>
-        <h3 className={styles.price}>{"$" + price}</h3>
+        <h4 className={styles.title}>{`${product.title}`}</h4>
+        <h3 className={styles.price}>{`${product.price}`}</h3>
+        <button
+          onClick={() => {
+            addToCart(product);
+            console.log(product);
+          }}
+          className={styles.btn}
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   );

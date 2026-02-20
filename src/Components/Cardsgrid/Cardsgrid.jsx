@@ -1,16 +1,11 @@
 import Card from "../Card/Card";
 import styles from "./Cardsgrid.module.css";
 
-function Cardsgrid({ products }) {
+function Cardsgrid({ products, addToCart }) {
   return (
     <div className={styles.cardsGrid}>
       {products.map((product) => (
-        <Card
-          key={product.id}
-          title={product.title}
-          price={product.price}
-          img={product.image}
-        />
+        <Card key={product.id} product={product} addToCart={addToCart} />
       ))}
     </div>
   );

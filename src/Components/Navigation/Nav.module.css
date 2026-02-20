@@ -56,6 +56,21 @@ svg {
   display: none;
 }
 
+.cart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  gap: 8px;
+}
+
+.cart div {
+  font-size: 10px;
+  background-color: red;
+  border-radius: 100%;
+  padding: 4px;
+}
+
 .navVisible {
   display: block;
 }

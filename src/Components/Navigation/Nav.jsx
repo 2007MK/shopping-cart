@@ -4,7 +4,7 @@ import { mdiMenu } from "@mdi/js";
 import { useState } from "react";
 import { Link } from "react-router";
 
-function Nav() {
+function Nav({ cartItems }) {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
@@ -30,8 +30,9 @@ function Nav() {
           <Link className={styles.navItems} to="/shop">
             Shop
           </Link>
-          <Link className={styles.navItems} to="/cart">
+          <Link className={`${styles.navItems} ${styles.cart}`} to="/cart">
             Cart
+            {cartItems === 0 ? "" : <div>{cartItems}</div>}
           </Link>
         </ul>
       </nav>

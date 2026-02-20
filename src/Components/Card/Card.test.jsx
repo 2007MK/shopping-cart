@@ -1,16 +1,33 @@
-import { beforeEach, describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import { screen, render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import Card from "./Card";
 
 describe("Card", () => {
   it("Display everything", () => {
-    render(<Card title={"xyz"} price={"99"} img={"#"} />);
+    const product = { id: 1, title: "xyz", price: 99, img: "#" };
+    render(<Card product={product} />);
 
     expect(screen.getByText("xyz")).toBeInTheDocument();
-    expect(screen.getByText("$99")).toBeInTheDocument();
+    expect(screen.getByText("99")).toBeInTheDocument();
     expect(screen.getByRole("img")).toBeInTheDocument();
     expect(
       screen.getByRole("button", { name: /add to cart/i }),
     ).toBeInTheDocument();
   });
+
+  it("Call the add to cart function properly", async () => {
+    const user = userEvent.setup();
+    const mockAddToCart = vi.fn();
+    const product = { id: 1, title: "xyz", price: 99, img: "#" };
+
+    render(<Card product={product} addToCart={mockAddToCart} />);
+
+    const addToCartBtn = screen.getByRole("button", { name: /add to cart/i });
+    await user.click(addToCartBtn);
+
+    expect(mockAddToCart).toHaveBeenCalled();
+  });
+
+  it.todo("The add to cart button changes to a counter", () => {});
 });
