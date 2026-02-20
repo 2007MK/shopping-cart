@@ -4,11 +4,11 @@ import { Outlet } from "react-router";
 import useCart from "./hooks/useCart.jsx";
 
 function App() {
-  const [cart, addToCart] = useCart();
+  const [cart, addToCart, removeFromCart, totalItems] = useCart();
   return (
     <>
-      <Nav cartItems={cart.length}></Nav>
-      <Outlet context={[cart, addToCart]}></Outlet>
+      <Nav cartItems={totalItems}></Nav>
+      <Outlet context={[cart, addToCart, removeFromCart]}></Outlet>
     </>
   );
 }

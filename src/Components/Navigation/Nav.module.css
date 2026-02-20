@@ -48,6 +48,10 @@ ul {
   text-decoration: none;
 }
 
+.navItems > * {
+  text-decoration: none;
+}
+
 svg {
   width: 2rem;
 }

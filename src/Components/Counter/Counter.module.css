@@ -1,0 +1,27 @@
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.leftBtn,
+.rightBtn {
+  background-color: var(--tertiary-accent);
+  height: 25px;
+  width: 25px;
+  color: var(--background-color);
+}
+
+.leftBtn {
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+}
+
+.rightBtn {
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.quantity {
+  color: var(--secondary-accent);
+}
