@@ -10,7 +10,11 @@ describe("Cardsgrid display", () => {
       { id: 2, title: "B", img: "#", price: "799" },
     ];
 
-    render(<Cardsgrid products={products} />);
+    render(
+      <MemoryRouter>
+        <Cardsgrid products={products} />
+      </MemoryRouter>,
+    );
 
     expect(screen.getByText("A")).toBeInTheDocument();
     expect(screen.getByText("B")).toBeInTheDocument();

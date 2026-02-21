@@ -5,7 +5,7 @@
   --secondary-accent: #00c0fe;
   --tertiary-accent: #f8604f;
   --primary-hover: #00c896;
-  --off-white: #ffffff;
+  --off-white: #f4f4f4;
 }
 
 * {
@@ -13,6 +13,10 @@
   margin: 0;
   box-sizing: border-box;
   color: white;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
