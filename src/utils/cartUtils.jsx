@@ -28,4 +28,11 @@ function getTotalItems(cart) {
   return total;
 }
 
-export { addItem, removeItem, getQuantityOfItem, getTotalItems };
+function getCartValue(cart) {
+  const total = Math.round(
+    cart.reduce((total, item) => total + item.quantity * item.price, 0),
+  );
+  return total;
+}
+
+export { addItem, removeItem, getQuantityOfItem, getTotalItems, getCartValue };

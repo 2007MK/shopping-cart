@@ -13,7 +13,11 @@ function useCart() {
     setCart((cart) => removeItem(cart, product));
   }
 
-  return [cart, addToCart, removeFromCart, totalItems];
+  function emptyCart() {
+    setCart([]);
+  }
+
+  return { cart, addToCart, removeFromCart, totalItems, emptyCart };
 }
 
 export default useCart;
