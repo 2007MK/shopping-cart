@@ -6,11 +6,11 @@
 This application was developed as part of my frontend development journey to master **React**. The primary goal was to move beyond simple components and handle a "global-like" state where items added in one view (Product Page) are reflected and editable in another (Cart).
 
 ## Features
-* **Product Catalog:** Fetches and displays products dynamically.
-* **Live Shopping Cart:** Real-time updates to item counts and total price.
-* **Navigation:** Smooth client-side routing between the Home and Shop pages.
-* **Responsive Design:** Optimized for both desktop and mobile viewing.
-* **Interactive UI:** Users can increment/decrement quantities directly within the cart.
+* **Live API Integration:** Dynamically fetches product data (titles, prices, images, and categories) from the [Fake Store API](https://fakestoreapi.com/).
+* **Asynchronous Loading:** Implemented loading states to ensure a smooth UI experience during data fetching.
+* **Live Shopping Cart:** Real-time updates to item counts and total price calculations.
+* **Navigation:** Smooth client-side routing between Home and Shop pages using React Router.
+* **Interactive UI:** Users can increment/decrement quantities and remove items directly from the cart.
 
 ## Tech Stack
 * **Framework:** React.js
